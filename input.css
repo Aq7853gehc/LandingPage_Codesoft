@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  color: white;
+  
+
+}
+
+main {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("/landscape.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  transition: all ease 2s;
+
+}
+
+.navbar {
+  display: flex;
+  background: transparent;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  max-width: 1500px;
+  /* border: 2px solid white; */
+}
+
+.nav_list {
+  display: flex;
+
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.nav_list > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.nav_list a {
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:first-child {
+  color: white;
+  font-weight: 600;
+}
+
+a:hover {
+  color: white;
+  font-weight: 700;
+}
+
+button {
+  position: relative;
+  padding: 4px 16px;
+
+  border-radius: 50px;
+  border: 2px solid white;
+
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  transition: all linear 0.4s;
+  z-index: 10;
+}
+button::after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 0%;
+  display: hidden;
+  height: 100%;
+  left: 0;
+  top: -1px;
+  z-index: -10;
+  transition: all ease 1s;
+}
+
+button:hover::after {
+  width: 100%;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo > div {
+  background: white;
+  color: black;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 100%;
+  font-weight: 900;
+  color: gray;
+}
+
+.container {
+  max-width: 1440px;
+  /* border: 2px solid white; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.container h1 {
+  font-size: 10dvh;
+  text-align: center;
+  
+}
+.container > p {
+  font-size: 1.5rem;
+}
